@@ -1,0 +1,26 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap';
+@import "font-awesome";
+@import 'posts';
+
+* { margin:0;padding:0; }
+body { font-family:"Apple SD Gothic Neo", "Malgun Gothic", sans-serif;font-size:16px; }
+h1, h2, h3, h4, h5, h6 { font-family:Aller, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;text-transform:lowercase  }
+
+.page-wrapper { padding:1.25rem 1.875rem/*20/16px 30/16px*/; }
+.site-title { text-align:center;font-size:3rem;font-weight:bold; }
+.main-title { font-size:2rem;font-weight:normal }

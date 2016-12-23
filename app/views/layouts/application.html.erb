@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>amuse</title>
+    <%= csrf_meta_tags %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.typekit.net/loy0zfr.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+
+  <body>
+	<div class="page-wrapper">
+		<div class="header">
+			<h1 class='site-title'>amuse</h1>
+			<nav>
+				<ul>
+				  <li class="<%= params[:bulletin_id] == '15' ? 'active' : '' %>"><%= link_to 'Work', bulletin_posts_path('15') %></li>
+				  <li class="<%= params[:bulletin_id] == '11' ? 'active' : '' %>"><%= link_to 'Contact Us', bulletin_posts_path('11') %></li>
+				</ul>
+			</nav>
+		</div><!--//.header-->
+    	<%= yield %>
+	</div><!--//.page-wrapper-->
+  </body>
+</html>
